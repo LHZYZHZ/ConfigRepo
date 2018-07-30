@@ -1,15 +1,16 @@
 spring:
   application:
     name: order
-  cloud:
-    config:
-      discovery:
-        enabled: true
-        service-id: CONFIG
-      profile: test
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: qboyedison77
+    url: jdbc:mysql://127.0.0.1:3366/SpringCloud_Sell?characterEncoding=utf-8&useSSL=false
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
 env:
   dev
+label:
+  release
